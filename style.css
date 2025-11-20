@@ -1,5 +1,190 @@
+/* Variáveis */
+:root {
+    --header-primary-color: #3ad07d;
+    --header-secundary-color: #1a5c38;
+
+    --header-text-color: #f0f8ff;
+    --main-background-color: #e8ecee;
+    --body-background-color: #84e1ad;
+    --headings-color: #1d5e3b;
+    --section-about-background-color: #c5ebd6;
+    --footer-background-color: #1a5c38;
+
+    --strong-color: #337f54;
+    --hyperlink-color: #146637;
+}
+
+::selection {
+    background-color: var(--headings-color);
+    color: var(--header-text-color);
+}
+
+
+/* Configuração da Fonte instalada */
+@font-face {
+    font-family: "Idroid";
+    src: url("fontes/idroid.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Declarações Globais */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--header-primary-color), var(--header-secundary-color));
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.732);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 2em;
+}
+
+header h1 {
+    margin: 0.5em 0 0 2em;
+}
+
+header p {
+    margin: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5%;
+}
+
+header nav a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font: 700 1.5em monospace;
+}
+
+
+main {
+    background-color: var(--main-background-color);
+    border-radius: 0 0 12px 12px;
+    margin: auto;
+    width: 70%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.599);
+}
+
+main section {
+    padding: 1em;
+}
+
+main section img.dan-droids, main section img.irina-blok {
+    width: 100%;
+}
+
+main section img.bug-droid {
+    text-align: justify;
+    width: 50%;
+}
+
+main section div#bug-droid-image{
+    text-align: center;
+}
+
+main section#video {
+    background-color: var(--headings-color);
+    padding: 2em;
+}
+
+main section#video iframe {
+    width: 100%;
+    height: 75vh;
+}
+
+main section#about article {
+    background-color: var(--section-about-background-color);
+    border-radius: 12px;
+}
+
+main section#about article ul {
+    font: normal 1.2em Arial;
+    margin: 1em 2em;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0px 50px;
+}
+
+main section#about article p:nth-child(5) {
+    padding-bottom: 1em;
+}
+
+main section#about article h2 {
+    background-color: #2fa866;
+    color: var(--header-text-color);
+    border-radius: 12px 12px 0 0;
+    font: 700 1.3em Arial;
+    padding: 1em;
+}
+
+main section#about article ul div:nth-child(2) {
+    width: 50%;
+}
+
+
+footer {
+    background-color: var(--footer-background-color);
+    text-align: center;
+    margin-top: 3em;
+    padding: 1em;
+    color: var(--section-about-background-color);
+}
+
+footer p {
+    padding: 0;
+}
+
+footer p a {
+    color: var(--main-background-color);
+}
+
+
+
+/* Seletores genéricos */
+h2, h3 {
+    color: var(--headings-color);
+}
+
+h2 {
+    font: 900 3em "Idroid";
+}
+
+h3 {
+    background-image: linear-gradient(to right, #c5ebd5, var(--main-background-color));
+    font: 800 2em "Idroid";
+}
+
+p {
+    font: normal 1.2em Arial;
+    text-indent: 1em;
+    margin: 0.5em;
+}
+
+strong {
+    color: var(--strong-color);
+    font-weight: 900;
+}
+
+a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a::after {
+    content: "\1F517";
 }
