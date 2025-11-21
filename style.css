@@ -1,24 +1,35 @@
 /* Variáveis */
 :root {
+    /* Body */
+    --body-background-color: #84e1ad;
+
+    /* Header */
     --header-primary-color: #3ad07d;
     --header-secundary-color: #1a5c38;
-
     --header-text-color: #f0f8ff;
+    --nav-hyperlinks-color: #c3ffdd;
+
+    /* Main */
     --main-background-color: #e8ecee;
-    --body-background-color: #84e1ad;
     --headings-color: #1d5e3b;
     --section-about-background-color: #c5ebd6;
+
+    /* Footer */
     --footer-background-color: #1a5c38;
 
+    /* Estilos Genéricos */
     --strong-color: #337f54;
     --hyperlink-color: #146637;
+
+    /* Fontes */
+    --bebas-font: "Bebas Neue", sans-serif;
 }
 
+/* Seleção */
 ::selection {
     background-color: var(--headings-color);
     color: var(--header-text-color);
 }
-
 
 /* Configuração da Fonte instalada */
 @font-face {
@@ -45,15 +56,16 @@ header {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
     color: var(--header-text-color);
     text-align: center;
-    padding: 2em;
+    padding: 2em 0 5px 0;
+    width: 100vw;
 }
 
 header h1 {
-    margin: 0.5em 0 0 2em;
+    font: 500 3.5em var(--bebas-font);
 }
 
 header p {
-    margin: 1em;
+    margin: 1em 0;
 }
 
 header nav {
@@ -63,9 +75,17 @@ header nav {
 }
 
 header nav a {
-    color: var(--header-text-color);
+    color: var(--nav-hyperlinks-color);
     text-decoration: none;
     font: 700 1.5em monospace;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 20px;
+    border-radius: 12px;
+}
+
+header nav a:hover {
+    background-color: #2ea461;
+    color: #005118;
 }
 
 
@@ -73,7 +93,8 @@ main {
     background-color: var(--main-background-color);
     border-radius: 0 0 12px 12px;
     margin: auto;
-    width: 70%;
+    max-width: 1000px;
+    min-width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.599);
 }
 
