@@ -55,9 +55,8 @@ header {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.732);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
     color: var(--header-text-color);
-    text-align: center;
     padding: 2em 0 5px 0;
-    width: 100vw;
+    text-align: center;
 }
 
 header h1 {
@@ -70,45 +69,35 @@ header p {
 
 header nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 2.5%;
 }
 
 header nav a {
     color: var(--nav-hyperlinks-color);
     text-decoration: none;
-    font: 700 1.5em monospace;
-    transition: all 0.5s ease-in-out;
-    padding: 15px 20px;
+    font: 700 1.2em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 12px;
+    padding: 7px 15px;
+    transition: all 0.3s ease-in-out;
 }
 
 header nav a:hover {
-    background-color: #2ea461;
-    color: #005118;
+    transform: scale(1.2);
 }
 
 
 main {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.599);
     background-color: var(--main-background-color);
     border-radius: 0 0 12px 12px;
-    margin: auto;
     max-width: 1000px;
     min-width: 350px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.599);
+    margin: auto;
 }
 
 main section {
     padding: 1em;
-}
-
-main section img.dan-droids, main section img.irina-blok {
-    width: 100%;
-}
-
-main section img.bug-droid {
-    text-align: justify;
-    width: 50%;
 }
 
 main section div#bug-droid-image{
@@ -140,6 +129,10 @@ main section#about article ul {
     gap: 0px 50px;
 }
 
+main section#about ul li {
+    list-style-type: "\2B50";
+}
+
 main section#about article p:nth-child(5) {
     padding-bottom: 1em;
 }
@@ -156,12 +149,29 @@ main section#about article ul div:nth-child(2) {
     width: 50%;
 }
 
+main section div.dan-droids {
+    background-image: url("imagens/dan-droids.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+}
+
+main section div.irina-block {
+    background-image: url("imagens/irina-blok.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
 
 footer {
     background-color: var(--footer-background-color);
     text-align: center;
     margin-top: 3em;
     padding: 1em;
+    width: 100vw;
     color: var(--section-about-background-color);
 }
 
@@ -209,3 +219,75 @@ a {
 main a::after {
     content: "\1F517";
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header nav a {
+        padding: 0;
+        font-size: 1em;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    main section h2 {
+        font-size: 2em;
+    }
+
+    main section h3 {
+        font-size: 1.7em;
+    }
+
+    main section p {
+        font-size: 1em;
+    }
+
+    main section div.dan-droids {
+        background-image: url("imagens/dan-droids-pq.png");
+        height: 70vh;
+    }
+
+    main section div.irina-block {
+        background-image: url("imagens/irina-blok-pq.jpg");
+        height: 65vh;
+    }
+
+    main section#video iframe {
+        width: 100%;
+        height: 40vh;
+    }
+
+    main section#video {
+        padding: 0.3em;
+    }
+
+    main section#about article ul {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 481px) {
+    main section h2 {
+        font-size: 1.5em;
+    }
+
+    main section h3 {
+        font-size: 1.2em;
+    }
+
+    main section p {
+        font-size: 0.85em;
+    }
+}
+
