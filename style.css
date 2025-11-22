@@ -5,7 +5,7 @@
 
     /* Header */
     --header-primary-color: #3ad07d;
-    --header-secundary-color: #1a5c38;
+    --header-secondary-color: #1a5c38;
     --header-text-color: #f0f8ff;
     --nav-hyperlinks-color: #c3ffdd;
 
@@ -21,6 +21,10 @@
     --strong-color: #337f54;
     --hyperlink-color: #146637;
 
+    /* Estilos da Barra Vertical */
+    --scrollbar-primary-color: #64d095;
+    --scrollbar-secondary-color: #44a16e;
+
     /* Fontes */
     --bebas-font: "Bebas Neue", sans-serif;
 }
@@ -29,6 +33,24 @@
 ::selection {
     background-color: var(--headings-color);
     color: var(--header-text-color);
+}
+
+/* Barra de Rolagem Horizontal */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--hyperlink-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, var(--scrollbar-primary-color), var(--scrollbar-secondary-color));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to top, var(--scrollbar-primary-color), var(--scrollbar-secondary-color));
 }
 
 /* Configuração da Fonte instalada */
@@ -51,7 +73,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--header-primary-color), var(--header-secundary-color));
+    background-image: linear-gradient(to bottom, var(--header-primary-color), var(--header-secondary-color));
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.732);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
     color: var(--header-text-color);
@@ -171,7 +193,6 @@ footer {
     text-align: center;
     margin-top: 3em;
     padding: 1em;
-    width: 100vw;
     color: var(--section-about-background-color);
 }
 
