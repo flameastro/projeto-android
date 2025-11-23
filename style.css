@@ -35,7 +35,7 @@
     color: var(--header-text-color);
 }
 
-/* Barra de Rolagem Horizontal */
+/* Barra de Rolagem Vertical */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -51,6 +51,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(to top, var(--scrollbar-primary-color), var(--scrollbar-secondary-color));
+}
+
+/* Barra de Rolagem Horizontal */
+html, body {
+    overflow-x: hidden;
 }
 
 /* Configuração da Fonte instalada */
