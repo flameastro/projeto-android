@@ -310,5 +310,12 @@ main a::after {
     main section p {
         font-size: 0.85em;
     }
-}
 
+    main section div.dan-droids {
+        height: 40vh;
+    }
+
+    main section div.irina-block {
+        height: 45vh;
+    }
+}
